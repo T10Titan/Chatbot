@@ -13,30 +13,23 @@ public class Controllerbot
 		simpleBot = new Chatbot();
 		
 	}
+
+public void start()
 	
-	public Chatbot()
 	{
-		this.joke = "Why did the monkey cross the road? cause I watned to get to out village ";
-		this.currentUser = new String("Then I beat the monkey");
-		this.content = new String("Then the  monkey never came back to our village");
+		String userInput = "";
 		
-		this.responseList = new ArrayList<String>();
-		this.spookyList = new ArrayList<String>();
-		buildTheLists();
+		while (!userInput.equalsIgnoreCase("quit"))
+		{
+			userInput = interactWithChatbot(userInput)
+					
+		}
 	}
-	
-	private void buildTheLists()
+	public String interactWithChatbot(String text)
 	{
-		responseList.add("No");
-		responseList.add("goodbye.");
-		responseList.add("Hi im TI who are you");
-		responseList.add("give me info");
-		responseList.add("Oh your just a normal human ok then.....")
-	}
-
-	public void interactWithChatbot()
-	{
-
+		String userInput = JOptionPane.showInputDialog(text);
+		chatbotSays = simpleBot.processText(userInput);
+		return chatbotSays;
 	}
 
 	public void get()
@@ -49,14 +42,6 @@ public class Controllerbot
 
 	}
 
-	public void start()
-	{
-		String userText = "Hi";
-		
-		while(!userText.equalsIgnoreCase("quit"))
-		{
-			userText= JOptionPane.showInputDialog(null,"Type quit to exit the chat");
-		}
-	}
+
 
 }
