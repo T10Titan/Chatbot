@@ -33,9 +33,9 @@ public class ChatbotModel
 	public void askName()
 	{
 		String userAnswer = JOptionPane.showInputDialog(null, "What is your name");
-		if (userAnser == null)
+		if (userAnswer == null)
 		{
-JOptionPane.showInputDialog(null,"Hey buddy Im not joking wit u")
+JOptionPane.showInputDialog(null,"Hey buddy Im not joking wit u");
 		}
 	}
 }
